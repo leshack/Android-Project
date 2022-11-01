@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Order App</string>
+
+        <string name="ice_cream_sandwiches">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
+        <string name="donuts">Donuts are glazed and sprinkled with candy.</string>
+        <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
+
+        <string name="donut_order_message">You ordered a donut</string>
+        <string name="ice_cream_order_message">You ordered an ice cream sandwich</string>
+        <string name="froyo_order_message">You ordered a Froyo</string>
+
+        <string name="same_day_delivery">Same day delivery</string>
+        <string name="next_day_delivery">Next day delivery</string>
+        <string name="pick_up">Self Pick up</string>
+
+
+</resources>
