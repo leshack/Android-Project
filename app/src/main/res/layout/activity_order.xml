@@ -149,6 +149,7 @@
             android:layout_height="wrap_content"
             android:text="SUBMIT ORDER"
             android:textSize="26sp"
+            android:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
