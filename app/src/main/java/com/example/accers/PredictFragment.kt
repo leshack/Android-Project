@@ -56,8 +56,8 @@ class PredictFragment : Fragment() {
                 }) {
                 override fun getParams(): MutableMap<String, String>? {
                     val params: MutableMap<String, String> = HashMap()
-                    params["biking"] = biking.text.toString()
-                    params["smoking"] = smoking.text.toString()
+                    params["biking"] = smoking.text.toString()
+                    params["smoking"] = biking.text.toString()
                     return params
                 }
             }
