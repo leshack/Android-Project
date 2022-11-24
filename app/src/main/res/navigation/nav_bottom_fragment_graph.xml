@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom_fragment_graph"
+    app:startDestination="@id/predictFragment">
+
+    <fragment
+        android:id="@+id/predictFragment"
+        android:name="com.example.accers.PredictFragment"
+        android:label="fragment_predict"
+        tools:layout="@layout/fragment_predict" />
+    <fragment
+        android:id="@+id/insightFragment"
+        android:name="com.example.accers.InsightFragment"
+        android:label="fragment_insight"
+        tools:layout="@layout/fragment_insight" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.accers.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+</navigation>

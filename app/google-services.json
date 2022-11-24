@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "604276558187",
+    "project_id": "accers-65713",
+    "storage_bucket": "accers-65713.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604276558187:android:ccc22bf03f777b29daa42e",
+        "android_client_info": {
+          "package_name": "com.example.accers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604276558187-nqn5ic4f4pfhjoer64jlg04pamif4320.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.accers",
+            "certificate_hash": "9edffc62b859cf7c5162cfd4e23f21e5fbcb5d1c"
+          }
+        },
+        {
+          "client_id": "604276558187-vve102ed39kb96scf7gedsm9427ns9ck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIH_w_DoS0ZUlfIARN6w0KZ9Ncxc2CKfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604276558187-vve102ed39kb96scf7gedsm9427ns9ck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

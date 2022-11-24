@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/predictFragment"
+        android:icon="@drawable/ic_baseline_bar_chart"
+        android:title="Predict"/>
+
+    <item
+        android:id="@+id/insightFragment"
+        android:title=""/>
+
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_baseline_all_inbox"
+        android:title="Chat"/>
+
+
+</menu>

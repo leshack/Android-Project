@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_contact_mail"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/graph"
+        android:icon="@drawable/ic_baseline_auto_graph"
+        android:title="@string/graphs_reports"/>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_loginout"
+        android:title="Logout"/>
+
+
+    </group>
+
+        <item android:title="Settings" android:icon="@drawable/ic_baseline_settings">
+            <menu>
+           <group android:checkableBehavior="single">
+
+           <item
+               android:id="@+id/access"
+               android:icon="@drawable/ic_baseline_fingerprint"
+               android:title="Access code"/>
+
+           <item
+           android:id="@+id/design"
+           android:icon="@drawable/ic_baseline_color_lens"
+           android:title="App design settings"/>
+
+           <item
+               android:id="@+id/fit"
+               android:icon="@drawable/ic_baseline_fitness_center"
+               android:title="Google Fit"/>
+
+           <item
+               android:id="@+id/reminders"
+               android:icon="@drawable/ic_baseline_notifications"
+               android:title="Reminders"/>
+
+           </group>
+            </menu>
+
+        </item>
+
+    <item android:title="Communication" >
+        <menu>
+            <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_baseline_contactless"
+            android:title="About us"/>
+
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_baseline_share"
+            android:title="Share"/>
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/ic_baseline_live_help"
+            android:title="Help"/>
+
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/ic_baseline_insert_emoticon"
+            android:title="Rate us"/>
+            </group>
+        </menu>
+
+    </item>
+
+</menu>

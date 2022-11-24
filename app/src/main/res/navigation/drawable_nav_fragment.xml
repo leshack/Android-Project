@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawable_nav_fragment"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.accers.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/graphFragment"
+        android:name="com.example.accers.GraphFragment"
+        android:label="fragment_graph"
+        tools:layout="@layout/fragment_graph" />
+    <fragment
+        android:id="@+id/accessCodeFragment"
+        android:name="com.example.accers.AccessCodeFragment"
+        android:label="fragment_access_code"
+        tools:layout="@layout/fragment_access_code" />
+    <fragment
+        android:id="@+id/aboutusFragment"
+        android:name="com.example.accers.AboutusFragment"
+        android:label="fragment_aboutus"
+        tools:layout="@layout/fragment_aboutus" />
+    <fragment
+        android:id="@+id/designFragment"
+        android:name="com.example.accers.DesignFragment"
+        android:label="fragment_design"
+        tools:layout="@layout/fragment_design" />
+    <fragment
+        android:id="@+id/remindersFragment"
+        android:name="com.example.accers.RemindersFragment"
+        android:label="fragment_reminders"
+        tools:layout="@layout/fragment_reminders" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.accers.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>
