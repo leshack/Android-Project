@@ -12,6 +12,9 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/drawable/ic_launcher_background.xml" value="0.231" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/drawable/less_dra.xml" value="0.231" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/drawable/less_dra2.xml" value="0.209" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/drawable/receive_round_box.xml" value="0.209" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/drawable/round_button.xml" value="0.209" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/drawable/send_round_box.xml" value="0.209" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/drawable/transparent_background.xml" value="0.21" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/activity_after_notification.xml" value="0.1417763157894737" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/activity_header1.xml" value="0.13289473684210526" />
@@ -22,6 +25,8 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/activity_start_page.xml" value="0.19" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/app_bar_main.xml" value="0.1411184210526316" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/contex_main.xml" value="0.1417763157894737" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/drawable_menu.xml" value="0.1417763157894737" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/fragment_aboutus.xml" value="0.1417763157894737" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/fragment_access_code.xml" value="0.13289473684210526" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/fragment_chat.xml" value="0.2" />
@@ -34,6 +39,7 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/fragment_profile.xml" value="0.1417763157894737" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/fragment_reminders.xml" value="0.1417763157894737" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/header.xml" value="0.12" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/layout/message_item.xml" value="0.22" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1417763157894737" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/menu/drawer_nav_menu.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Accers/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21" />

@@ -2,16 +2,62 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="733dp"
+    android:theme="@style/Theme.App.Starting2"
+    android:background="#d4c9e7"
     tools:context=".ChatFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="733dp">
+
+        <LinearLayout
+            android:id="@+id/ll_layout_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="#d4c9e7"
+            android:background="#E4E4E4"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight=".5"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@android:color/white"
+                android:hint="Type a message..."
+                android:inputType="textShortMessage"
+                android:padding="10dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:backgroundTint="#fff0707d"
+                android:text="Send"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Chart"
-        android:background="@drawable/less_dra"
-        android:gravity="center"
-        android:textSize="24dp"/>
-
+        android:layout_above="@id/ll_layout_bar"
+        tools:itemCount="20"
+        android:layout_below="@+id/dark_divider"
+        tools:listitem="@layout/message_item" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#d4c9e7"
+        android:id="@+id/dark_divider"/>
+    </RelativeLayout>
 </FrameLayout>

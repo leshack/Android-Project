@@ -73,7 +73,9 @@ class MainActivity : AppCompatActivity() {
 
         navigationView.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.home->{ Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show() }
+                R.id.home->{ Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show()
+                    val intent : Intent = Intent(this , MainActivity::class.java)
+                    startActivity(intent)}
                 R.id.profile->replaceFragment(ProfileFragment(),it.title.toString())
                 R.id.graph->{ Toast.makeText(this, "Graph and reports clicked", Toast.LENGTH_SHORT).show()
                                replaceFragment(GraphFragment(),it.title.toString())}

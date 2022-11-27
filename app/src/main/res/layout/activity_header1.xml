@@ -22,7 +22,7 @@
         android:id="@+id/emailheader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lawez@gmail.com"
+        android:text=""
         android:textColor="#FFFFFF"
         android:textSize="18dp" />
 

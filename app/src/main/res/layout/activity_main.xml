@@ -6,6 +6,7 @@
         android:id="@+id/drawableLayout"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
+        android:background="@color/botbut"
         tools:openDrawer="start">
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -13,55 +14,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <include-->
-<!--        android:id="@+id/app_bar_main"-->
-<!--        layout="@layout/content_main"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" />-->
+    <include
+        android:id="@+id/app_bar_main"
+        layout="@layout/drawable_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
+<!--    drawables opening fragment -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/framelayout" />
 
-    <fragment
-        android:id="@+id/mainContainer"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="821dp"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_bottom_fragment_graph" />
-
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="10dp"
-        app:fabCradleVerticalOffset="10dp">
-
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/transparent_background"
-            app:menu="@menu/bottom_nav_menu" />
-
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/ininite"
-        android:src="@drawable/ic_baseline_all_inclusive"
-        app:backgroundTint="@color/ininite"
-        app:layout_anchor="@id/bottomAppBar" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.google.android.material.navigation.NavigationView
