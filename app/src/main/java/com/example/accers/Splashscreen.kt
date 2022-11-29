@@ -29,6 +29,7 @@ class Splashscreen : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+
         };thread.start();
     }
 }

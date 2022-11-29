@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+       firebaseAuth = FirebaseAuth.getInstance()
 
 
         progressDialog = ProgressDialog(this)
