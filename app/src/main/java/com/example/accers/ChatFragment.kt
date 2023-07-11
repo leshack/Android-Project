@@ -1,5 +1,6 @@
 package com.example.accers
 
+import MessagingAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,12 +19,16 @@ import com.example.accers.BotResponse
 import com.example.accers.Constants.OPEN_GOOGLE
 import com.example.accers.Constants.OPEN_SEARCH
 import com.example.accers.Time
-import kotlinx.android.synthetic.main.fragment_chat.*
+import com.example.accers.databinding.FragmentChatBinding
+
 import kotlinx.coroutines.*
 
 
+@OptIn(DelicateCoroutinesApi::class)
 class ChatFragment : Fragment() {
     private val TAG = "ChatFragment"
+
+    private lateinit var binding:FragmentChatBinding
 
 
     var messagesList = mutableListOf<Message>()
@@ -33,17 +38,8 @@ class ChatFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        var view = inflater.inflate(R.layout.fragment_chat, container, false)
-
-       // var button: Button = view.findViewById(R.id.btn_send)
-
-
-        val random = (0..3).random()
-        customBotMessage("Hello! Today you're speaking with ${botList[random]}, how may I help?")
-
-        return view
-
+        binding = FragmentChatBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -51,21 +47,24 @@ class ChatFragment : Fragment() {
 
         clickEvents()
         recyclerView()
+
+        val random = (0..3).random()
+        customBotMessage("Hello! Today you're speaking with ${botList[random]}, how may I help?")
     }
 
     private fun clickEvents() {
         //Send a message
-        btn_send.setOnClickListener {
+        binding.btnSend.setOnClickListener {
             sendMessage()
         }
 
-       // Scroll back to correct position when user clicks on text view
-        et_message.setOnClickListener {
+        // Scroll back to correct position when user clicks on text view
+        binding.etMessage.setOnClickListener {
             GlobalScope.launch {
                 delay(100)
 
                 withContext(Dispatchers.Main) {
-                    rv_messages.scrollToPosition(adapter.itemCount - 1)
+                    binding.rvMessages.scrollToPosition(adapter.itemCount - 1)
 
                 }
             }
@@ -75,33 +74,33 @@ class ChatFragment : Fragment() {
 
     private fun recyclerView() {
         adapter = MessagingAdapter()
-        rv_messages.adapter = adapter
-        rv_messages.layoutManager = LinearLayoutManager(activity)
+        binding.rvMessages.adapter = adapter
+        binding.rvMessages.layoutManager = LinearLayoutManager(activity)
     }
 
 
     override fun onStart() {
         super.onStart()
-        //In case there are messages, scroll to bottom when re-opening app
+        /* In case there are messages, scroll to bottom when re-opening app */
         GlobalScope.launch {
             delay(100)
             withContext(Dispatchers.Main) {
-                rv_messages.scrollToPosition(adapter.itemCount - 1)
+                binding.rvMessages.scrollToPosition(adapter.itemCount - 1)
             }
         }
     }
 
     private fun sendMessage() {
-        val message = et_message.text.toString()
+        val message = binding.etMessage.text.toString()
         val timeStamp = Time.timeStamp()
 
         if (message.isNotEmpty()) {
             //Adds it to our local list
             messagesList.add(Message(message, SEND_ID, timeStamp))
-            et_message.setText("")
+            binding.etMessage.setText("")
 
             adapter.insertMessage(Message(message, SEND_ID, timeStamp))
-            rv_messages.scrollToPosition(adapter.itemCount - 1)
+            binding.rvMessages.scrollToPosition(adapter.itemCount - 1)
 
             botResponse(message)
         }
@@ -125,7 +124,7 @@ class ChatFragment : Fragment() {
                 adapter.insertMessage(Message(response, RECEIVE_ID, timeStamp))
 
                 //Scrolls us to the position of the latest message
-                rv_messages.scrollToPosition(adapter.itemCount - 1)
+                binding.rvMessages.scrollToPosition(adapter.itemCount - 1)
 
                 //Starts Google
                 when (response) {
@@ -154,7 +153,7 @@ class ChatFragment : Fragment() {
                 messagesList.add(Message(message, RECEIVE_ID, timeStamp))
                 adapter.insertMessage(Message(message, RECEIVE_ID, timeStamp))
 
-                rv_messages.scrollToPosition(adapter.itemCount - 1)
+                binding.rvMessages.scrollToPosition(adapter.itemCount - 1)
             }
         }
     }

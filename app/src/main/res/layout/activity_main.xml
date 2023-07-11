@@ -14,6 +14,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Add this Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/botbut"
+        app:titleTextColor="@android:color/white" />
+
     <include
         android:id="@+id/app_bar_main"
         layout="@layout/drawable_menu"
@@ -26,6 +34,8 @@
         android:layout_height="match_parent"
         android:id="@+id/framelayout" />
 
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.google.android.material.navigation.NavigationView
@@ -35,6 +45,7 @@
             android:layout_gravity="start"
             app:headerLayout="@layout/activity_header1"
             app:menu="@menu/drawer_nav_menu" />
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

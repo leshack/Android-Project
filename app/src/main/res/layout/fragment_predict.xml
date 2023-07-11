@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/less_dra"
-    tools:context=".PredictFragment"><![CDATA[ android:textSize="24dp"/>
+    tools:context=".PredictFragment"
+    tools:ignore="ExtraText"><![CDATA[ android:textSize="24dp"/>
 ]]>
 
     <LinearLayout
@@ -42,6 +43,8 @@
             android:textColor="#8e8e8e"
             android:textColorHint="#8e8e8e"
             android:textSize="18sp" />
+
+
 
         <TextView
             android:id="@+id/smoking"

@@ -50,28 +50,30 @@ class MainActivity : AppCompatActivity() {
     private val channelId = "12345"
     private val description = "Test Notification"
 
-   // private val viewModel: MainViewModel by viewModels()
+    // private val viewModel: MainViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       firebaseAuth = FirebaseAuth.getInstance()
-
+        firebaseAuth = FirebaseAuth.getInstance()
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Please wait")
         progressDialog.setIcon(R.drawable.ic_baseline_architecture)
         progressDialog.setCanceledOnTouchOutside(false)
 
-         drawerLayout = findViewById(R.id.drawableLayout)
+        drawerLayout = findViewById(R.id.drawableLayout)
         val navigationView: NavigationView = findViewById(R.id.nav_view)
-        actionBarDrawerToggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close )
+        setSupportActionBar(findViewById(R.id.toolbar)) // Add this line to set the support action bar
+
+        actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-       supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6740AC")))
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6740AC")))
 
+        // Rest of your code...
         navigationView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.home->{ Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show()
@@ -79,19 +81,19 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)}
                 R.id.profile->replaceFragment(ProfileFragment(),it.title.toString())
                 R.id.graph->{ Toast.makeText(this, "Graph and reports clicked", Toast.LENGTH_SHORT).show()
-                               replaceFragment(GraphFragment(),it.title.toString())}
+                    replaceFragment(GraphFragment(),it.title.toString())}
                 R.id.logout->{  checkUser()
-                               }
+                }
                 R.id.access->{ Toast.makeText(this, "Access clicked", Toast.LENGTH_SHORT).show()
-                                replaceFragment(AccessCodeFragment(),it.title.toString())}
+                    replaceFragment(AccessCodeFragment(),it.title.toString())}
                 R.id.design->{Toast.makeText(this, "Design clicked", Toast.LENGTH_SHORT).show()
-                                replaceFragment(DesignFragment(),it.title.toString())}
+                    replaceFragment(DesignFragment(),it.title.toString())}
                 R.id.fit->{Toast.makeText(this, "Google fit clicked", Toast.LENGTH_SHORT).show()
-                                replaceFragment(GoogleFitFragment(),it.title.toString())}
+                    replaceFragment(GoogleFitFragment(),it.title.toString())}
                 R.id.reminders->{Toast.makeText(this, "Reminders clicked", Toast.LENGTH_SHORT).show()
-                                replaceFragment(RemindersFragment(),it.title.toString())}
+                    replaceFragment(RemindersFragment(),it.title.toString())}
                 R.id.about->{Toast.makeText(this, "About clicked", Toast.LENGTH_SHORT).show()
-                                replaceFragment(AboutusFragment(),it.title.toString())}
+                    replaceFragment(AboutusFragment(),it.title.toString())}
                 R.id.share->{Toast.makeText(this, "Share application clicked", Toast.LENGTH_SHORT).show()}
                 R.id.help->{Toast.makeText(this, "Help clicked", Toast.LENGTH_SHORT).show()}
                 R.id.rate->{Toast.makeText(this, "Rate us clicked", Toast.LENGTH_SHORT).show()}
@@ -110,10 +112,10 @@ class MainActivity : AppCompatActivity() {
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as
                 NotificationManager
 
-             floatingActionButton.setOnClickListener{
-                //Notification when a user clicks at the Insight
+        floatingActionButton.setOnClickListener{
+            //Notification when a user clicks at the Insight
             val intent = Intent(this, MainActivity::class.java)
-            val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+            val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 notificationChannel = NotificationChannel(channelId, description, NotificationManager .IMPORTANCE_HIGH)
                 notificationChannel.lightColor = Color.BLUE
@@ -130,11 +132,11 @@ class MainActivity : AppCompatActivity() {
 
             ///floating action button replacing it with the associated fragment
             val navHostFragment = InsightFragment()
-             supportFragmentManager.beginTransaction().replace(R.id.mainContainer, navHostFragment, NavHostFragment::class.java.simpleName )
-                    .commit()
+            supportFragmentManager.beginTransaction().replace(R.id.mainContainer, navHostFragment, NavHostFragment::class.java.simpleName )
+                .commit()
         }
     }
-///passing the drawables fragments
+    ///passing the drawables fragments
     private fun replaceFragment(fragment: Fragment, title: String) {
 
         val fragmentManager = supportFragmentManager
@@ -155,7 +157,7 @@ class MainActivity : AppCompatActivity() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser != null){
             val email = firebaseUser.email
-           // Toast.makeText(this,"You logged out$email",Toast.LENGTH_LONG).show()
+            // Toast.makeText(this,"You logged out$email",Toast.LENGTH_LONG).show()
             progressDialog.setMessage("Logging Out....$email")
             progressDialog.show()
             firebaseAuth.signOut()

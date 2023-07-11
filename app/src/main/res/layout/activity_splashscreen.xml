@@ -24,6 +24,7 @@
         app:lottie_rawRes="@raw/a"
         app:lottie_speed="1" />
 
+
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
